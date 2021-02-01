@@ -19,14 +19,12 @@ public class Sequence_Equation {
         for (int i=1;i<=n;i++){
             //myArraySeq[i]=lScan.indexOf(lSeq.get(i))+1;
             hashMap.put(i,lScan.indexOf(lSeq.get(i-1))+1);
-
         }
         for (int i=1;i<=hashMap.size();i++){
             int value=hashMap.get(i);
             System.out.println(hashMap.get(value));
         }
         //System.out.println(hashMap);
-
         //System.out.println(Arrays.toString(myArraySeq));
     }
 }

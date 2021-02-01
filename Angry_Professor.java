@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class Angry_Professor {
     public static void main(String[] args) {
+        //1 2 3 4
+        //0 1 2 3
         Scanner sc=new Scanner(System.in);
         int t=sc.nextInt();
         while (t-- >0){

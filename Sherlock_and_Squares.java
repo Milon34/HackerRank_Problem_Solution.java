@@ -32,6 +32,7 @@ public class Sherlock_and_Squares {
 //                    count++;
 //                }
 //            }
+            //
             System.out.println((int) (Math.floor(Math.sqrt(k)-Math.ceil(Math.sqrt(n)))+1));
         }
     }

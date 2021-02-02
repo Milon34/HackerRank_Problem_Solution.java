@@ -13,7 +13,7 @@ public class Road_Repair {
         for (long i=0;i<n1;i++){
             l.add(sc.nextLong());
         }
-        //System.out.println(l);
+
         long n2=sc.nextLong();
         List<Integer> l2=new ArrayList<>();
         for (int i=0;i<n2;i++){

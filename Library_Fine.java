@@ -91,8 +91,6 @@ class testJJ {
             List<String> l=new ArrayList<>();
             l.add(sc.nextLine());
             l.add(sc.nextLine());
-               // System.out.println(s1);
-               // String s2 = sc.nextLine();
             System.out.println(l);
 
             int a,b;

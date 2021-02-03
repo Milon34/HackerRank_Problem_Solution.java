@@ -39,7 +39,7 @@ public class Maximum_Cost_of_Laptop_Count {
                 }if (s[i+1].equals("illegal")&&arr[0]==0){
                     sum+=arr[i+1];
                 }
-//                if(count==myVal){
+                //                if(count==myVal){
 //                    System.out.println(sum);
 //                    return;
 //                }

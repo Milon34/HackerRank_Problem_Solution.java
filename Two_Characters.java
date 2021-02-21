@@ -47,8 +47,12 @@ class testF{
                 count++;
             }
             arr[j + 1] = key;
+            for (int i1:arr){
+                System.out.print(i1+" ");
+            }
+            System.out.println();
         }
-        System.out.println(count);
+       // System.out.println(count);
     }
     public static void main(String args[])
     {

@@ -1,5 +1,6 @@
 package HackerRank;
 
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class String_Construction {
@@ -7,33 +8,24 @@ public class String_Construction {
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
         for (int i=0;i<n;i++){
-            String s1=sc.next();
+            String s=sc.next();
            // String s2=sc.next();
-            int k=0,f=0;
-            int count=0;
-            for (int m=1;m<=s1.length();m++){
-                String sub=s1.substring(k,m-1);
-                //System.out.println(sub);
-                String mys= String.valueOf(s1.charAt(f));
-               // System.out.println("co:"+mys);
-                if (sub.contains(mys)){
-
-                }else {
-                    count++;
-                }
-                f++;
+//            int k=0,f=0;
+//            int count=0;
+            HashSet<Character> hash=new HashSet<>();
+            for (int m=0;m<s.length();m++){
+                hash.add(s.charAt(m));
             }
-            System.out.println(count);
-//            for (int m=1;m<=s2.length();m++){
-//                String sub=s2.substring(k,m);
-//                String myS=String.valueOf(s2.charAt(f));
-//                if (sub.contains(myS)){
-//
+//            for (int m=1;m<=s1.length();m++){
+//                String sub=s1.substring(k,m-1);
+//                String mys= String.valueOf(s1.charAt(f));
+//                if (sub.contains(mys)){
 //                }else {
 //                    count++;
 //                }
+//                f++;
 //            }
-//            System.out.println(count);
+            System.out.println(hash.size());
         }
     }
 }

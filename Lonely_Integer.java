@@ -3,9 +3,9 @@ package HackerRank;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.StringTokenizer;
 
-public class Missing_Numbers {
+public class Lonely_Integer {
     static class RealScanner {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer("");
@@ -36,28 +36,18 @@ public class Missing_Numbers {
     }
 
     public static void main(String[] args) {
-        RealScanner sc = new RealScanner();
-        int n = sc.nextInt();
-        int[] arr1 = new int[n];
-        for (int i = 0; i < n; i++) {
-            arr1[i] = sc.nextInt();
+        RealScanner sc=new RealScanner();
+        int n=sc.nextInt();
+        int[] arr=new int[101];
+        for (int i=0;i<n;i++){
+            int x=sc.nextInt();
+            arr[x]++;
         }
-        int m = sc.nextInt();
-        List<Integer> l=new ArrayList<>();
-        for (int i = 0; i < m; i++) {
-            l.add(sc.nextInt());
-        }
-       for (int i=0;i<arr1.length;i++){
-           int idx=l.lastIndexOf(arr1[i]);
-           l.remove(idx);
-       }
-       Collections.sort(l);
-       LinkedHashSet<Integer> h=new LinkedHashSet<>();
-       for (int i=0;i<l.size();i++){
-           h.add(l.get(i));
-       }
-        for (int i:h){
-            System.out.print(i+" ");
+        for (int i=0;i<arr.length;i++){
+            if (arr[i]==1){
+                System.out.println(i);
+                break;
+            }
         }
     }
 }

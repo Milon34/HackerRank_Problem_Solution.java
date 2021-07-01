@@ -3,9 +3,12 @@ package HackerRank;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.StringTokenizer;
 
-public class Missing_Numbers {
+public class Maximizing_XOR {
     static class RealScanner {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer("");
@@ -37,27 +40,18 @@ public class Missing_Numbers {
 
     public static void main(String[] args) {
         RealScanner sc = new RealScanner();
-        int n = sc.nextInt();
-        int[] arr1 = new int[n];
-        for (int i = 0; i < n; i++) {
-            arr1[i] = sc.nextInt();
+        int l, r;
+        l = sc.nextInt();
+        r = sc.nextInt();
+        List<Integer> per = new ArrayList<>();
+        for (int i = l; i <= r; i++) {
+            for (int j = i + 1; j <= r; j++) {
+                per.add(i ^ j);
+            }
         }
-        int m = sc.nextInt();
-        List<Integer> l=new ArrayList<>();
-        for (int i = 0; i < m; i++) {
-            l.add(sc.nextInt());
-        }
-       for (int i=0;i<arr1.length;i++){
-           int idx=l.lastIndexOf(arr1[i]);
-           l.remove(idx);
-       }
-       Collections.sort(l);
-       LinkedHashSet<Integer> h=new LinkedHashSet<>();
-       for (int i=0;i<l.size();i++){
-           h.add(l.get(i));
-       }
-        for (int i:h){
-            System.out.print(i+" ");
-        }
+        if (Collections.max(per) > 0) {
+            System.out.println(Collections.max(per));
+        } else
+            System.out.println(0);
     }
 }
